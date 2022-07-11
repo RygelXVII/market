@@ -26,6 +26,9 @@ return new class extends Migration
             $table->unsignedDecimal('rental_rate');
             $table->unsignedDecimal('cost');
             $table->timestamps();
+
+            $table->index(['category_id']);
+            $table->index(['weight_gram']);
         });
     }
 

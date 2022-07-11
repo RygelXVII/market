@@ -19,6 +19,8 @@ return new class extends Migration
             $table->unsignedBigInteger('parent_id');
             $table->unsignedBigInteger('tree[]');
             $table->timestamps();
+
+            $table->index(['tree[]']);
         });
     }
 
